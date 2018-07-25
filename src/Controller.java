@@ -118,8 +118,11 @@ class Controller extends JFrame {
                 Coord coord = new Coord(x, y);
                 if (e.getButton() == MouseEvent.BUTTON1)
                     game.pressLB(coord);
-                if (e.getButton() == MouseEvent.BUTTON2)
+                if (e.getButton() == MouseEvent.BUTTON2) {
                     game.start();
+                    label.setText(getMessage());
+                    panel.repaint();
+                }
                 if (e.getButton() == MouseEvent.BUTTON3)
                     game.pressRB(coord);
                 label.setText(getMessage());
